@@ -12,10 +12,10 @@ provider "aws" {
 }
 
 resource "aws_instance" "my-instance" {
-  ami = 
-  instance_type = 
-  vpc_security_group_id  = 
-  subnet_id = 
+  ami = "ami-020cba7c55df1f615"
+  instance_type = var.instance_type
+  vpc_security_group_id  = aws_vpc.main.id
+  subnet_id = aws_subnet.subnet1.id
 
   tags =  {
     name = "instance1"
@@ -23,10 +23,10 @@ resource "aws_instance" "my-instance" {
 }
 
 resource "aws_instance" "my-instance2" {
-  ami = var.ami
-  instance_type = t3.micro
-  vpc_security_group_id  = 
-  subnet_id = 
+  ami = "ami-020cba7c55df1f615"
+  instance_type = var.instance_type
+  vpc_security_group_id  = aws_vpc.main.id
+  subnet_id = aws_subnet.subnet1.id
 
   tags =  {
     name = "instance2"
