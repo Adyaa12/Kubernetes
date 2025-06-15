@@ -26,3 +26,7 @@ variable "subnet2_cidr" {
     type = string
     description = "subnet cidr for my ec2 instance"
 }
+variable "instance_type" {
+    type = string
+    description = "type id for my ec2 instance"
+}
